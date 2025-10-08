@@ -2,22 +2,20 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-gray-300 py-10 mt-auto  ">
-      <div className="max-w-6xl mx-auto py-4 grid grid-cols-2 md:grid-cols-4 gap-6 border-y-2">
-        <div>
+    <div className="text-gray-300 py-10">
+      <div className="py-4 grid grid-cols-2 md:grid-cols-4 gap-6 border-y-2">
+        <div className=" gap-4 pl-32 ">
           <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
           <p className="text-sm">Get the latest updates</p>
           <div className="flex mt-2">
-            <form>
-              <input
-                type="text"
-                placeholder="Your Email"
-                className="rounded-r-none"
-              />
-              <button className="rounded-l-none bg-indigo-600 hover:bg-indigo-700">
-                Email Me!
-              </button>
-            </form>
+            <input
+              type="text"
+              placeholder="Your Email"
+              className="rounded bg-gray-900 w-24"
+            />
+            <button className="rounded-l-none bg-indigo-600 hover:bg-indigo-700">
+              Email Me!
+            </button>
           </div>
         </div>
         <div>
