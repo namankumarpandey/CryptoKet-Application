@@ -1,8 +1,10 @@
 import React from "react";
 
+import { FaBeer } from 'react-icons/fa';
+
 const Footer = () => {
   return (
-    <div className="text-gray-300 py-10">
+    <div className="text-gray-300">
       <div className="py-4 grid grid-cols-2 md:grid-cols-4 gap-6 border-y-2">
         <div className=" gap-4 pl-32 ">
           <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
@@ -13,7 +15,7 @@ const Footer = () => {
               placeholder="Your Email"
               className="rounded bg-gray-900 w-24"
             />
-            <button className="rounded-l-none bg-indigo-600 hover:bg-indigo-700">
+            <button className="rounded-l-none bg-pink-600 hover:bg-pink-500">
               Email Me!
             </button>
           </div>

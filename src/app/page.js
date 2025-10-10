@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Page() {
   return (
     <div className="flex items-center justify-center flex-col">
@@ -11,6 +13,7 @@ export default function Page() {
           >
             <h4>JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.</h4>
             <h6>Drag and Drop File</h6>
+            <h6>or browse media on your device</h6>
           </label>
           <input
             type="file"
@@ -39,7 +42,7 @@ export default function Page() {
           <textarea
             id="description"
             placeholder="Description of your item"
-            className="w-full border p-2 rounded px-4 py-3"
+            className="w-full border p-2 rounded"
           ></textarea>
         </div>
 
@@ -59,7 +62,7 @@ export default function Page() {
             type="submit"
             className="w-1/4 bg-pink-600 hover:bg-pink-500 text-white font-semibold py-2 rounded-md transition "
           >
-            Create Item
+            <Link href="/create-item">Create Item </Link>
           </button>
         </div>
       </form>

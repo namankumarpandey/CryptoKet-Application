@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen text-white font-[Poppins] bg-gray-900">
-        <div className="w-full shadow-lg">
+        <div className="max-w-3xl m-auto bg-[#181828]">
           <Header />
           {children}
           <Footer />
