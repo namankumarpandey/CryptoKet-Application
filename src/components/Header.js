@@ -1,9 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Header = () => {
   return (
     <div className="p-4 flex gap-4 items-center justify-center border-b-1">
+      <Image src="/public/Crypto-icon.png" alt="Cryto icon" />
       <h1>CryptoKet</h1>
       <form className="flex-1 max-w-md">
         <input
