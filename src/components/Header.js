@@ -5,8 +5,18 @@ import React from "react";
 const Header = () => {
   return (
     <div className="p-4 flex gap-4 items-center justify-center border-b-1">
-      <Image src="/public/Crypto-icon.png" alt="Cryto icon" />
-      <h1>CryptoKet</h1>
+      <div className="flex flex-row justify-center items-center gap-2">
+        <div>
+          <Image
+            src="/Crypto-icon.png"
+            alt="Cryto icon"
+            width={20}
+            height={40}
+          />
+        </div>
+        <h1>CryptoKet</h1>
+      </div>
+
       <form className="flex-1 max-w-md">
         <input
           type="text"
@@ -30,13 +40,13 @@ const Header = () => {
       <div className="flex gap-2">
         <button
           type="button"
-          className="rounded border-pink-200 border-solid border px-3 bg-pink-600 "
+          className="rounded border-pink-200 border-solid px-3 bg-pink-600 "
         >
           Create
         </button>
         <button
           type="button"
-          className="rounded border-pink-200 border-solid border px-6"
+          className="rounded border-pink-600 border-solid border px-6"
         >
           Connect
         </button>

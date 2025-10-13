@@ -1,12 +1,10 @@
 import React from "react";
 
-import { FaBeer } from 'react-icons/fa';
-
 const Footer = () => {
   return (
     <div className="text-gray-300">
-      <div className="py-4 grid grid-cols-2 md:grid-cols-4 gap-6 border-y-2">
-        <div className=" gap-4 pl-32 ">
+      <div className="py-4 flex flex-row gap-6 border-y-2">
+        <div className="gap-4 pl-32 ">
           <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
           <p className="text-sm">Get the latest updates</p>
           <div className="flex mt-2">
@@ -20,7 +18,7 @@ const Footer = () => {
             </button>
           </div>
         </div>
-        <div>
+        <div className="px-10">
           <h4 className="font-semibold mb-2 text-white">CryptoKet</h4>
           <ul className="space-y-1 text-sm">
             <li>
@@ -34,8 +32,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
-          <h4 className="font-semibold mb-2 text-white">Support</h4>
+        <div className="px-28">
+          <h4 className="font-semibold mb-2 text-white ">Support</h4>
           <ul>
             <li>
               <a href="#">Help Center</a>
