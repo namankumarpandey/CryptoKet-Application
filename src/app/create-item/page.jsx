@@ -2,7 +2,7 @@ import React from "react";
 
 const page = () => {
   return (
-      <div className="flex md:flex-row bg-[#181828] rounded-xl overflow-hidden shadow-2xl w-full">
+      <div className="flex md:flex-row bg-[#343442] rounded-xl overflow-hidden shadow-2xl w-full">
         {/* Left side image */}
         <div className="md:w-1/2 p-11 ">
           <img

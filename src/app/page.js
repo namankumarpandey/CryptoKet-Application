@@ -1,31 +1,40 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="flex items-center justify-center flex-col">
-      <form className="flex flex-col gap-5 py-4 ">
+    <div className="flex items-center justify-center py-10 flex-col">
+      <form className="flex flex-col gap-5 w-full max-w-md">
         <h1 className="font-extrabold text-2xl ">Create new Item</h1>
+
+        {/* Upload File */}
         <div>
-          <label htmlFor="file" className="font-bold">
+          <h1 htmlFor="file" className="block mb-1 font-bold">
             Upload File
-          </label>
+          </h1>
           <label
             htmlFor="file"
-            className="flex flex-col gap-3 justify-center items-center border-2 border-dashed p-4"
+            className="flex flex-col gap-2 justify-center items-center border-2 border-dashed p-6 cursor-pointer"
           >
             <h4>JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.</h4>
-            <h6>Drag and Drop File</h6>
-            <h6>or browse media on your device</h6>
+            <Image
+              src="/save file.png"
+              alt="save file"
+              width={60}
+              height={50}
+            />
+            <p className="text-sm">Drag and Drop File</p>
+            <p className="text-sm">or browse media on your device</p>
           </label>
           <input
             type="file"
             id="file"
             hidden
-            className="w-full border-2 border-dashed p-2 rounded "
-            placeholder="Drag and Drop File or browse media on your device"
+            className="w-full border-2 border-dashed p-2 rounded"
           />
         </div>
 
+        {/* Name */}
         <div>
           <label htmlFor="name" className="block mb-1 font-bold">
             Name
@@ -37,8 +46,10 @@ export default function Page() {
             className="w-full border p-2 rounded"
           />
         </div>
+
+        {/* Description */}
         <div>
-          <label htmlFor="description" className="block font-bold">
+          <label htmlFor="description" className="block mb-1 font-bold">
             Description
           </label>
           <textarea
@@ -48,8 +59,9 @@ export default function Page() {
           ></textarea>
         </div>
 
+        {/* Price */}
         <div>
-          <label htmlFor="price" className="font-bold">
+          <label htmlFor="price" className="block mb-1 font-bold">
             Price
           </label>
           <input
@@ -59,13 +71,15 @@ export default function Page() {
             className="w-full border p-2 rounded"
           />
         </div>
-        <div className="flex justify-end m-4">
-          <button
-            type="submit"
-            className="w-1/4 bg-pink-600 hover:bg-pink-500 text-white font-semibold py-2 rounded-md transition "
+
+        {/* Submit Button */}
+        <div className="flex justify-end">
+          <Link
+            href="/create-item"
+            className="w-1/3 bg-pink-600 hover:bg-pink-500 text-white text-center font-semibold py-2 rounded-md transition "
           >
-            <Link href="/create-item">Create Item </Link>
-          </button>
+            Create Item
+          </Link>
         </div>
       </form>
     </div>
