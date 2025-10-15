@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -16,7 +15,7 @@ export default function Page() {
 
     if (!formData.name.trim()) {
       newErrors.name = "name is required.";
-    } else if (formData.name.length < 10) {
+    } else if (formData.name.length < 3) {
       newErrors.name = "name must be at least 3 characters.";
     }
 
@@ -81,11 +80,12 @@ export default function Page() {
             id="name"
             placeholder="Item Name"
             value={formData.name}
-            onChange={(e) => {
-              setFormData({ ...formData, name: e.target.value });
-            }}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="w-full bg-[#2b2b35] text-white rounded-md px-4 py-3 placeholder:text-white focus:outline-none"
           />
+          {errors.name && (
+            <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+          )}
         </div>
 
         {/* Description */}
