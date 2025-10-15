@@ -19,7 +19,7 @@ const Header = () => {
       </div>
 
       {/* Search */}
-      <form className="flex-1 max-w-md bg-gray-900 border-gray-700 rounded ">
+      <form className="flex-1 max-w-md bg-gray-900 border-gray-700 rounded-xl">
         <input
           type="text"
           placeholder="Search Item Here"
