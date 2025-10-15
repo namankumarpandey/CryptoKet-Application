@@ -4,49 +4,53 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="p-4 flex gap-4 items-center justify-center border-b-1">
-      <div className="flex flex-row justify-center items-center gap-2">
+    <div className="p-4 flex gap-8 items-center justify-center border-b-1">
+      {/* Logo */}
+      <div className="flex flex-row items-center gap-2 pl-8">
         <div>
           <Image
             src="/Crypto-icon.png"
-            alt="Cryto icon"
+            alt="Crypto icon"
             width={20}
             height={40}
           />
         </div>
-        <h1>CryptoKet</h1>
+        <h1 className="font-bold text-lg ">CryptoKet</h1>
       </div>
 
-      <form className="flex-1 max-w-md">
+      {/* Search */}
+      <form className="flex-1 max-w-md bg-gray-900 border-gray-700 rounded ">
         <input
           type="text"
           placeholder="Search Item Here"
-          className="border p-2 rounded w-full"
+          className="p-2 rounded-xl w-full"
         />
       </form>
 
+      {/* Link */}
       <div className="flex gap-4 items-center">
-        <Link href="/explore" className="text-2xl font-semibold mb-2">
+        <Link href="/explore" className="text-sm text-gray-500 font-semibold">
           Explore
         </Link>
-        <Link href="/my-Items" className="text-2xl font-semibold mb-2">
+        <Link href="/my-Items" className="text-sm text-gray-500 font-semibold">
           My Items
         </Link>
-        <Link href="/following" className="text-2xl font-semibold mb-2">
+        <Link href="/following" className="text-sm text-gray-500 font-semibold">
           Following
         </Link>
       </div>
 
+      {/* Buttons */}
       <div className="flex gap-2">
         <button
           type="button"
-          className="rounded border-pink-200 border-solid px-3 bg-pink-600 "
+          className="rounded-xl border-pink-200 border-solid px-6 py-2 bg-pink-600 font-bold"
         >
           Create
         </button>
         <button
           type="button"
-          className="rounded border-pink-600 border-solid border px-6"
+          className="rounded-xl border-pink-600 border px-8 py-2 text-pink-600 font-bold" 
         >
           Connect
         </button>

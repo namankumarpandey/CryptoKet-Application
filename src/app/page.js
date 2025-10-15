@@ -1,22 +1,34 @@
+"use client"
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
-  return (
-    <div className="flex items-center justify-center py-10 flex-col">
-      <form className="flex flex-col gap-5 w-full max-w-md">
-        <h1 className="font-extrabold text-2xl ">Create new Item</h1>
+  const [formData, setFormData] = useState({
+    name: "",
+    description: "",
+    price: "",
+  });
+  const [errors, setErrors] = useState({});
 
+  
+
+  return (
+    <div className="max-w-md mx-auto mt-12 mb-12 px-4">
+      <h1 className="font-bold text-2xl mb-8">Create new Item</h1>
+      <form className="flex flex-col gap-6">
         {/* Upload File */}
         <div>
-          <h1 htmlFor="file" className="block mb-1 font-bold">
+          <h1 htmlFor="file" className="block mb-2 font-bold">
             Upload File
           </h1>
           <label
             htmlFor="file"
-            className="flex flex-col gap-2 justify-center items-center border-2 border-dashed p-6 cursor-pointer"
+            className="flex flex-col gap-2 items-center border-2 border-dashed rounded-md p-6 cursor-pointer bg-[#2b2b35]"
           >
-            <h4>JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.</h4>
+            <h2 className="font-bold">
+              JPG, PNG, GIF, SVG, WEBM, MP3, MP4. Max 100mb.
+            </h2>
             <Image
               src="/save file.png"
               alt="save file"
@@ -30,53 +42,52 @@ export default function Page() {
             type="file"
             id="file"
             hidden
-            className="w-full border-2 border-dashed p-2 rounded"
           />
         </div>
 
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block mb-1 font-bold">
+          <label htmlFor="name" className="block mb-2 font-semibold">
             Name
           </label>
           <input
             type="text"
             id="name"
             placeholder="Item Name"
-            className="w-full border p-2 rounded"
+            className="w-full bg-[#2b2b35] text-white rounded-md px-4 py-3 placeholder:text-white focus:outline-none"
           />
         </div>
 
         {/* Description */}
         <div>
-          <label htmlFor="description" className="block mb-1 font-bold">
+          <label htmlFor="description" className="block mb-2 font-semibold">
             Description
           </label>
           <textarea
             id="description"
             placeholder="Description of your item"
-            className="w-full border p-2 rounded"
+            className="w-full bg-[#2b2b35] text-white placeholder:text-white px-4 py-3 rounded-md focus:outline-none"
           ></textarea>
         </div>
 
         {/* Price */}
         <div>
-          <label htmlFor="price" className="block mb-1 font-bold">
+          <label htmlFor="price" className="block mb-2 font-semibold">
             Price
           </label>
           <input
             type="number"
             id="price"
             placeholder="Enter Price"
-            className="w-full border p-2 rounded"
+            className="w-full bg-[#2b2b35] p-2 rounded-md px-4 py-3 placeholder:text-white focus:outline-none"
           />
         </div>
 
         {/* Submit Button */}
-        <div className="flex justify-end">
+        <div className="flex justify-end mt-6">
           <Link
             href="/create-item"
-            className="w-1/3 bg-pink-600 hover:bg-pink-500 text-white text-center font-semibold py-2 rounded-md transition "
+            className="w-1/3 bg-pink-600 hover:bg-pink-500 text-white text-center font-semibold py-3 rounded-md transition-all "
           >
             Create Item
           </Link>

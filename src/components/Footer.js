@@ -3,17 +3,17 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="text-gray-300">
-      <div className="py-4 flex flex-row gap-6 border-y-2">
-        <div className="gap-4 pl-32 ">
+      <div className="py-4 flex items-center justify-center gap-6 border-y-2">
+        <div className="flex flex-col gap-1 pr-28">
           <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
-          <p className="text-sm">Get the latest updates</p>
+          <p className="font-bold">Get the latest updates</p>
           <div className="flex mt-2">
             <input
               type="text"
               placeholder="Your Email"
-              className="rounded bg-gray-900 w-24"
+              className="rounded-l-sm bg-gray-900 w-40"
             />
-            <button className="rounded-l-none bg-pink-600 hover:bg-pink-500">
+            <button type="button" className="rounded-xl bg-pink-600 hover:bg-pink-500 p-2">
               Email Me!
             </button>
           </div>
@@ -50,7 +50,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-xs text-gray-500 mt-6">
+      <div className="text-center text-xs text-white font-bold mt-6">
         © CryptoKet, Inc. All Rights Reserved.
       </div>
     </div>
