@@ -2,22 +2,29 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="text-gray-300">
-      <div className="py-4 flex items-center justify-center gap-6 border-y-2">
+    // Footer 
+    <footer className="text-white">
+      <div className="py-4 flex items-center justify-center gap-6 border-t border-gray-700">
+        {/* Left Section */}
         <div className="flex flex-col gap-1 pr-28">
           <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
           <p className="font-bold">Get the latest updates</p>
           <div className="flex mt-2">
             <input
-              type="text"
+              type="email"
               placeholder="Your Email"
-              className="rounded-l-sm bg-gray-900 w-40"
+              className="rounded-l-sm bg-gray-900 w-40 focus:outline-none"
             />
-            <button type="button" className="rounded-xl bg-pink-600 hover:bg-pink-500 p-2">
+            <button
+              type="button"
+              className="rounded-xl bg-pink-600 hover:bg-pink-700 px-5 py-3"
+            >
               Email Me!
             </button>
           </div>
         </div>
+
+        {/* Middle Section */}
         <div className="px-10">
           <h4 className="font-semibold mb-2 text-white">CryptoKet</h4>
           <ul className="space-y-1 text-sm">
@@ -32,6 +39,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
+        {/* Right Section */}
         <div className="px-28">
           <h4 className="font-semibold mb-2 text-white ">Support</h4>
           <ul>
@@ -50,10 +59,12 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="text-center text-xs text-white font-bold mt-6">
-        © CryptoKet, Inc. All Rights Reserved.
+
+      {/* Bottom Bar */}
+      <div className="mt-12 text-center text-xs text-white font-bold border-t border-gray-700 pt-6">
+        <p>© CryptoKet, Inc. All Rights Reserved.</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

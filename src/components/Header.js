@@ -4,7 +4,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="p-4 flex gap-8 items-center justify-center border-b-1">
+    // Navbar
+    <nav className="p-4 flex gap-8 items-center justify-center border-b border-gray-700">
       {/* Logo */}
       <div className="flex flex-row items-center gap-2 pl-8">
         <div>
@@ -18,24 +19,34 @@ const Header = () => {
         <h1 className="font-bold text-lg ">CryptoKet</h1>
       </div>
 
-      {/* Search */}
+      {/* Search Bar */}
       <form className="flex-1 max-w-md bg-gray-900 border-gray-700 rounded-xl">
         <input
           type="text"
           placeholder="Search Item Here"
-          className="p-2 rounded-xl w-full"
+          className="p-2 rounded-xl w-full focus:outline-none"
         />
       </form>
 
-      {/* Link */}
+      {/* Menu and Buttons */}
       <div className="flex gap-4 items-center">
-        <Link href="/explore" className="text-sm text-gray-500 font-semibold">
+        {/* Links */}
+        <Link
+          href="/explore"
+          className="text-sm text-gray-500 font-semibold hover:text-white"
+        >
           Explore
         </Link>
-        <Link href="/my-Items" className="text-sm text-gray-500 font-semibold">
+        <Link
+          href="/my-Items"
+          className="text-sm text-gray-500 font-semibold hover:text-white"
+        >
           My Items
         </Link>
-        <Link href="/following" className="text-sm text-gray-500 font-semibold">
+        <Link
+          href="/following"
+          className="text-sm text-gray-500 font-semibold hover:text-white"
+        >
           Following
         </Link>
       </div>
@@ -50,12 +61,12 @@ const Header = () => {
         </button>
         <button
           type="button"
-          className="rounded-xl border-pink-600 border px-8 py-2 text-pink-600 font-bold" 
+          className="rounded-xl border-pink-600 border px-8 py-2 text-pink-600 font-bold"
         >
           Connect
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
