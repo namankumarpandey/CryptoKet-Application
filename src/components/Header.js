@@ -5,9 +5,9 @@ import React from "react";
 const Header = () => {
   return (
     // Navbar
-    <nav className="p-4 flex gap-8 items-center justify-center border-b border-gray-700">
+    <nav className="p-4 flex flex-wrap items-center justify-between border-b border-gray-700">
       {/* Logo */}
-      <div className="flex flex-row items-center gap-2 pl-8">
+      <div className="flex items-center gap-2 mb-2 md:mb-0">
         <div>
           <Image
             src="/Crypto-icon.png"
@@ -29,23 +29,23 @@ const Header = () => {
       </form>
 
       {/* Menu and Buttons */}
-      <div className="flex gap-4 items-center">
+      <div className="hidden md:flex gap-6 items-center">
         {/* Links */}
         <Link
           href="/explore"
-          className="text-sm text-gray-500 font-semibold hover:text-white"
+          className="text-sm text-gray-400 font-semibold hover:text-white"
         >
           Explore
         </Link>
         <Link
           href="/my-Items"
-          className="text-sm text-gray-500 font-semibold hover:text-white"
+          className="text-sm text-gray-400 font-semibold hover:text-white"
         >
           My Items
         </Link>
         <Link
           href="/following"
-          className="text-sm text-gray-500 font-semibold hover:text-white"
+          className="text-sm text-gray-400 font-semibold hover:text-white"
         >
           Following
         </Link>

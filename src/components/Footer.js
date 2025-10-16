@@ -1,23 +1,36 @@
+import Image from "next/image";
 import React from "react";
 
 const Footer = () => {
   return (
-    // Footer 
-    <footer className="text-white">
-      <div className="py-4 flex items-center justify-center gap-6 border-t border-gray-700">
+    // Footer
+    <footer className="mt-auto text-white flex flex-col border-t border-gray-700 px-6 py-10 md:px-24 lg:py-10">
+      <div className="grid grid-cols-6 gap-6">
         {/* Left Section */}
-        <div className="flex flex-col gap-1 pr-28">
-          <h3 className="text-lg font-semibold mb-2 text-white">CryptoKet</h3>
-          <p className="font-bold">Get the latest updates</p>
-          <div className="flex mt-2">
+        <div className="col-span-6 lg:col-span-2">
+          <div className="flex items-center gap-2 mb-4">
+            <div className="p-2">
+              <Image
+                src="/Crypto-icon.png"
+                alt="Crypto icon"
+                width={20}
+                height={40}
+              />
+            </div>
+            <h2 className="text-xl font-semibold">CryptoKet</h2>
+          </div>
+
+          <p className="font-bold text-gray-300 mb-4">Get the latest updates</p>
+
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center rounded-md w-full max-w-xs sm:max-w-sm">
             <input
               type="email"
               placeholder="Your Email"
-              className="rounded-l-sm bg-gray-900 w-40 focus:outline-none"
+              className="rounded-l-sm bg-gray-900 w-40 focus:outline-none px-5 py-3"
             />
             <button
               type="button"
-              className="rounded-xl bg-pink-600 hover:bg-pink-700 px-5 py-3"
+              className="rounded-xl bg-pink-600 hover:bg-pink-700 px-5 py-3 font-semibold transition-all"
             >
               Email Me!
             </button>
@@ -25,9 +38,9 @@ const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="px-10">
-          <h4 className="font-semibold mb-2 text-white">CryptoKet</h4>
-          <ul className="space-y-1 text-sm">
+        <div className="col-span-3 lg:col-span-2">
+          <h3 className="text-lg font-semibold mb-4 text-white">CryptoKet</h3>
+          <ul className="space-y-3 text-gray-300">
             <li>
               <a href="#">Explore</a>
             </li>
@@ -41,9 +54,9 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className="px-28">
-          <h4 className="font-semibold mb-2 text-white ">Support</h4>
-          <ul>
+        <div className="col-span-3 lg:col-span-2">
+          <h3 className="text-lg font-semibold mb-4 text-white ">Support</h3>
+          <ul className="space-y-3 text-gray-300">
             <li>
               <a href="#">Help Center</a>
             </li>

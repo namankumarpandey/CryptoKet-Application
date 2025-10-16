@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ export default function Page() {
     price: "",
   });
   const [errors, setErrors] = useState({});
+  const router = useRouter();
 
   const validate = () => {
     const newErrors = {};
@@ -39,7 +41,7 @@ export default function Page() {
     e.preventDefault();
     if (validate()) {
       alert("Form Submitted sucessfully ");
-      console.log("Form Data:", formData);
+      router.push("/create-item");
     }
   };
   return (
