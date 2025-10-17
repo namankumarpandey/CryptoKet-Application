@@ -22,20 +22,21 @@ const Footer = () => {
 
           <p className="font-bold text-gray-300 mb-4">Get the latest updates</p>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center rounded-md w-full max-w-xs sm:max-w-sm">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center rounded-xl w-full max-w-xs sm:max-w-sm relative">
             <input
               type="email"
               placeholder="Your Email"
-              className="rounded-l-sm bg-gray-900 w-40 focus:outline-none px-5 py-3"
+              className="rounded-xl bg-gray-900 focus:outline-none px-5 py-3 w-full"
             />
             <button
               type="button"
-              className="rounded-xl bg-pink-600 hover:bg-pink-700 px-5 py-3 font-semibold transition-all"
+              className="rounded-xl bg-pink-600 hover:bg-pink-700 px-5 py-3 font-semibold transition-all absolute right-3 bottom-0"
             >
               Email Me!
             </button>
           </div>
         </div>
+
 
         {/* Middle Section */}
         <div className="col-span-3 lg:col-span-2">
